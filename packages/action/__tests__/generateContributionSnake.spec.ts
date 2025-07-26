@@ -29,9 +29,13 @@ it(
 
     const outputs = parseOutputsOption(entries);
 
-    const results = await generateContributionSnake("isitreallyalive", outputs, {
-      githubToken: process.env.GITHUB_TOKEN!,
-    });
+    const results = await generateContributionSnake(
+      "isitreallyalive",
+      outputs,
+      {
+        githubToken: process.env.GITHUB_TOKEN!,
+      },
+    );
 
     expect(results[0]).toBeDefined();
     expect(results[1]).toBeDefined();

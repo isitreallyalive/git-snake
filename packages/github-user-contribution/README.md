@@ -5,7 +5,8 @@ Get the github user contribution graph
 ## Usage
 
 ```js
-const { cells, colorScheme } = await getGithubUserContribution("isitreallyalive");
+const { cells, colorScheme } =
+  await getGithubUserContribution("isitreallyalive");
 
 // colorScheme = [
 //    "#ebedf0",

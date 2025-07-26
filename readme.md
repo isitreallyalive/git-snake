@@ -47,7 +47,7 @@ available as a github action. it can automatically generate a new image each day
 
     # list of files to generate.
     # one file per line. each output can be customized with options as query string.
-    
+
     # supported options:
     # - palette:        a preset of color, one of [github, github-dark, github-light]
     # - color_snake:    color of the snake
