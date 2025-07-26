@@ -164,7 +164,7 @@ const createGrid = (cells, { sizeDotBorderRadius, sizeDot, sizeCell }, duration)
 ;// CONCATENATED MODULE: ../svg-creator/stack.ts
 
 
-const createStack = (cells, { sizeDot }, width, y, duration) => {
+const createStack = (cells, { sizeDot, colorProgress }, width, y, duration) => {
     const svgElements = [];
     const styles = [
         `.u{ 
@@ -212,7 +212,7 @@ const createStack = (cells, { sizeDot }, width, y, duration) => {
             t,
             style: `transform:scale(${scale.toFixed(3)},1)`,
         }))), `.u.${id} {
-        fill: var(--c${color});
+        fill: ${colorProgress ? colorProgress : `var(--c${color})`};
         animation-name: ${animationName};
         transform-origin: ${x}px 0
       }
@@ -257,7 +257,10 @@ const createSvg = (grid, cells, chain, drawOptions, animationOptions) => {
     const livingCells = createLivingCells(grid, chain, cells);
     const elements = [
         createGrid(livingCells, drawOptions, duration),
-        createStack(livingCells, drawOptions, grid.width * drawOptions.sizeCell, (grid.height + 2) * drawOptions.sizeCell, duration),
+        createStack(livingCells, {
+            sizeDot: drawOptions.sizeDot,
+            colorProgress: drawOptions.colorProgress,
+        }, grid.width * drawOptions.sizeCell, (grid.height + 2) * drawOptions.sizeCell, duration),
         createSnake(chain, drawOptions, duration),
     ];
     const viewBox = [
