@@ -3,7 +3,7 @@
   "description": "Generates a snake game from a github user contributions grid",
   "version": "3.3.0",
   "private": true,
-  "repository": "github:platane/snk",
+  "repository": "github:isitreallyalive/snk",
   "devDependencies": {
     "@types/bun": "1.2.2",
     "prettier": "3.5.1",

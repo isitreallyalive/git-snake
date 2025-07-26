@@ -25,8 +25,8 @@ __webpack_require__.d(__webpack_exports__, {
  * @param options
  *
  * @example
- *  getGithubUserContribution("platane", { from: "2019-01-01", to: "2019-12-31" })
- *  getGithubUserContribution("platane", { year: 2019 })
+ *  getGithubUserContribution("isitreallyalive", { from: "2019-01-01", to: "2019-12-31" })
+ *  getGithubUserContribution("isitreallyalive", { year: 2019 })
  *
  */
 const getGithubUserContribution = async (userName, o) => {
@@ -53,7 +53,7 @@ const getGithubUserContribution = async (userName, o) => {
         headers: {
             Authorization: `bearer ${o.githubToken}`,
             "Content-Type": "application/json",
-            "User-Agent": "me@platane.me",
+            "User-Agent": "me@isitreallyalive.me",
         },
         method: "POST",
         body: JSON.stringify({ variables, query }),

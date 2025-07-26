@@ -16,7 +16,7 @@ const cors =
     if (origin) {
       const { host, hostname } = new URL(origin);
 
-      if (hostname === "localhost" || host === "platane.github.io")
+      if (hostname === "localhost" || host === "isitreallyalive.github.io")
         res.headers.set("Access-Control-Allow-Origin", origin);
     }
 
