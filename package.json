@@ -1,9 +1,9 @@
 {
-  "name": "snk",
+  "name": "snkgen",
   "description": "Generates a snake game from a github user contributions grid",
-  "version": "3.3.0",
+  "version": "0.0.0",
   "private": true,
-  "repository": "github:isitreallyalive/snk",
+  "repository": "github:isitreallyalive/snkgen",
   "devDependencies": {
     "@types/bun": "1.2.2",
     "prettier": "3.5.1",

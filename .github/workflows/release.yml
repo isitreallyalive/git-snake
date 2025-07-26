@@ -5,14 +5,14 @@ on:
     inputs:
       version:
         description: |
-          New version for the release
-          If the version is in format <major>.<minor>.<patch> a new release is emitted.
-          Otherwise for other format ( for example <major>.<minor>.<patch>-beta.1 ), a prerelease is emitted.
+          new version for the release
+          if the version is in format <major>.<minor>.<patch> a new release is emitted.
+          otherwise for other format ( for example <major>.<minor>.<patch>-beta.1 ), a prerelease is emitted.
         default: "0.0.1"
         required: true
         type: string
       description:
-        description: "Version description"
+        description: "version description"
         type: string
 
 jobs:
@@ -38,12 +38,12 @@ jobs:
         with:
           push: true
           tags: |
-            isitreallyalive/snk:${{ github.sha }}
-            isitreallyalive/snk:${{ github.event.inputs.version }}
+            isitreallyalive/snkgen:${{ github.sha }}
+            isitreallyalive/snkgen:${{ github.event.inputs.version }}
 
       - name: update action.yml to point to the newly created docker image
         run: |
-          sed -i "s/image: .*/image: docker:\/\/isitreallyalive\/snk@${{ steps.docker-build.outputs.digest }}/" action.yml
+          sed -i "s/image: .*/image: docker:\/\/isitreallyalive\/snkgen@${{ steps.docker-build.outputs.digest }}/" action.yml
 
       - uses: oven-sh/setup-bun@v1
 
@@ -63,7 +63,7 @@ jobs:
         run: |
           VERSION=${{ github.event.inputs.version }}
 
-          git config --global user.email "bot@isitreallyalive.me"
+          git config --global user.email "bot@newty.dev"
           git config --global user.name "release bot"
           git add package.json svg-only/dist action.yml
           git commit -m "📦 $VERSION"

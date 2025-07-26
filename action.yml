@@ -1,10 +1,10 @@
-name: "snk"
+name: "snkgen"
 description: "generate a snake game from a user's contributions grid. hard fork of Platane/snk."
 author: "isitreallyalive"
 
 runs:
   using: docker
-  image: docker://isitreallyalive/snk@sha256:96390294299275740e5963058c9784c60c5393b3b8b16082dcf41b240db791f9
+  image: docker://isitreallyalive/snkgen@sha256:96390294299275740e5963058c9784c60c5393b3b8b16082dcf41b240db791f9
 
 inputs:
   github_user_name:

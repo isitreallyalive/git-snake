@@ -122,7 +122,7 @@ export const createSvg = (
     }).replace("/>", ">"),
 
     "<desc>",
-    "Generated with https://github.com/isitreallyalive/snk",
+    "Generated with https://github.com/isitreallyalive/snkgen",
     "</desc>",
 
     "<style>",

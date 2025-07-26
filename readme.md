@@ -1,6 +1,6 @@
-# snk
+# snkgen
 
-[![GitHub release](https://img.shields.io/github/release/isitreallyalive/snk.svg?style=flat-square)](https://github.com/isitreallyalive/snk/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/isitreallyalive/snkgen.svg?style=flat-square)](https://github.com/isitreallyalive/snkgen/releases/latest)
 [![GitHub marketplace](https://img.shields.io/badge/marketplace-snake-blue?logo=github&style=flat-square)](https://github.com/marketplace/actions/generate-snake-game-from-github-contribution-grid)
 ![type definitions](https://img.shields.io/npm/types/typescript?style=flat-square)
 ![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
@@ -16,21 +16,21 @@ additionally, this fork is open to contributions, so feel free to open issues or
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/isitreallyalive/snk/output/github-contribution-grid-snake-dark.svg"
+    srcset="https://raw.githubusercontent.com/isitreallyalive/snkgen/output/github-contribution-grid-snake-dark.svg"
   />
   <source
     media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/isitreallyalive/snk/output/github-contribution-grid-snake.svg"
+    srcset="https://raw.githubusercontent.com/isitreallyalive/snkgen/output/github-contribution-grid-snake.svg"
   />
   <img
     alt="github contribution grid snake animation"
-    src="https://raw.githubusercontent.com/isitreallyalive/snk/output/github-contribution-grid-snake.svg"
+    src="https://raw.githubusercontent.com/isitreallyalive/snkgen/output/github-contribution-grid-snake.svg"
   />
 </picture>
 
 pull a github user's contribution graph and turn it into a snake game. the snake eats cells in order, showing your activity.
 
-generate a [gif](https://github.com/isitreallyalive/snk/raw/output/github-contribution-grid-snake.gif) or [svg](https://github.com/isitreallyalive/snk/raw/output/github-contribution-grid-snake.svg) image. colors can [be](https://raw.githubusercontent.com/isitreallyalive/snk/output/github-contribution-grid-snake-ocean.svg) [customized](https://raw.githubusercontent.com/isitreallyalive/snk/output/github-contribution-grid-snake-grey.svg).
+generate a [gif](https://github.com/isitreallyalive/snkgen/raw/output/github-contribution-grid-snake.gif) or [svg](https://github.com/isitreallyalive/snkgen/raw/output/github-contribution-grid-snake.svg) image. colors can [be](https://raw.githubusercontent.com/isitreallyalive/snkgen/output/github-contribution-grid-snake-ocean.svg) [customized](https://raw.githubusercontent.com/isitreallyalive/snkgen/output/github-contribution-grid-snake-grey.svg).
 
 available as a github action. it can automatically generate a new image each day, perfect for your [github profile readme](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
 
@@ -39,7 +39,7 @@ available as a github action. it can automatically generate a new image each day
 ### github action
 
 ```yaml
-- uses: isitreallyalive/snk@v3
+- uses: isitreallyalive/snkgen@v3
   with:
     # github user name to read the contribution graph from (**required**)
     # using action context var `github.repository_owner` or specified user
@@ -63,7 +63,7 @@ available as a github action. it can automatically generate a new image each day
 
 ### svg
 
-if you only want to generate an svg (not a gif), use the faster action: `isitreallyalive/snk/svg-only@v3`.
+if you only want to generate an svg (not a gif), use the faster action: `isitreallyalive/snkgen/svg-only@v3`.
 
 ### dark mode
 
@@ -81,11 +81,11 @@ for dark mode support on github, use this [special syntax](https://docs.github.c
 
 ### interactive demo
 
-<a href="https://isitreallyalive.github.io/snk">
+<a href="https://isitreallyalive.github.io/snkgen">
   <img height="300px" src="https://user-images.githubusercontent.com/1659820/121798244-7c86d700-cc25-11eb-8c1c-b8e65556ac0d.gif" ></img>
 </a>
 
-[isitreallyalive.github.io/snk](https://isitreallyalive.github.io/snk)
+[isitreallyalive.github.io/snkgen](https://isitreallyalive.github.io/snkgen)
 
 ### local
 
